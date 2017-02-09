@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bwie.moonlighttea.NewsFragmentTabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tabhost"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--标题栏-->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+
+            android:layout_alignParentTop="true"
+            android:background="#ffffff"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="#ff9224" />
+
+        <!--四个导航按钮 注意ID命名-->
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom" />
+
+        <!--填充放置Fragment 注意ID命名-->
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@android:id/tabs"
+            android:layout_below="@id/title" />
+    </RelativeLayout>
+
+</com.bwie.moonlighttea.NewsFragmentTabHost>
